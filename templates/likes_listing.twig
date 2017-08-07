@@ -1,0 +1,7 @@
+<span
+    class="{{ likes.current ? 'hartjes-active' }}"
+    title="{{ likes.totals.heart|default(0) }} mensen vonden dit interessant">
+    <svg class="icon icon-hart">
+      <use xlink:href="#icon-hart"></use>
+    </svg> {{ likes.totals.heart|default(0) }}
+</span>

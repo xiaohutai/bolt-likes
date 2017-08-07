@@ -1,0 +1,23 @@
+{% spaceless %}
+
+<a
+    href="#"
+    class="{{ likes.current ? 'hartjes-active' }}"
+    data-hartjes="heart"
+    data-contenttype="{{ record.contenttype.slug }}"
+    data-id="{{ record.id }}"
+    data-value="{{ likes.current ? 1 : 0 }}"
+    title="{{ likes.totals.heart|default(0) }} mensen vonden dit interessant">
+    <svg class="icon icon-hart">
+        <use xlink:href="#icon-hart"></use>
+    </svg>
+    {%- if likes.totals.heart is defined and likes.totals.heart > 1 -%}
+        {{ likes.totals.heart }} hartjes
+    {%- elseif likes.totals.heart is defined and likes.totals.heart == 1 -%}
+        Al 1 hartje
+    {%- else -%}
+        Hartje
+    {%- endif -%}
+</a>
+
+{% endspaceless %}

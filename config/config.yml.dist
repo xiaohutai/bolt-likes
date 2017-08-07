@@ -1,0 +1,9 @@
+# Type can be either 'heart' (for "like") or 'thumbs' (for "like / dislike")
+type: heart
+
+template: likes.twig
+
+labels:
+    heart: "%num% likes given."
+    thumb_up: "%num% thumbs up given."
+    thumb_down: "%num% thumbs down given."
